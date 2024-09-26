@@ -45,9 +45,7 @@ public class Menu {
         System.out.println("Escolha a tabela:");
         System.out.println("1. Usuario");
         System.out.println("2. Projeto");
-        System.out.println("3. Projetos_Usuario");
-        System.out.println("4. Tarefa");
-        System.out.println("5. Relatorio_Progresso");
+        System.out.println("3. Tarefa");
         System.out.print("Escolha uma tabela: ");
 
         int tabelaEscolhida = scanner.nextInt();
@@ -59,16 +57,16 @@ public class Menu {
                 if (acao.equals("excluir")) Metodos.excluirUsuario();
                 break;
             case 2:
-                // Implementar para Projeto
+                if (acao.equals("inserir")) Metodos.inserirProjeto();
+                if (acao.equals("atualizar")) Metodos.atualizarProjeto();
+                if (acao.equals("consultar")) Metodos.consultarProjeto();
+                if (acao.equals("excluir")) Metodos.excluirProjeto();
                 break;
             case 3:
-                // Implementar para Projetos_Usuario
-                break;
-            case 4:
-                // Implementar para Tarefa
-                break;
-            case 5:
-                // Implementar para Relatorio_Progresso
+                if (acao.equals("inserir")) Metodos.inserirTarefa();
+                if (acao.equals("atualizar")) Metodos.atualizarTarefa();
+                if (acao.equals("consultar")) Metodos.consultarTarefa();
+                if (acao.equals("excluir")) Metodos.excluirTarefa();
                 break;
             default:
                 System.out.println("Tabela inválida.");
